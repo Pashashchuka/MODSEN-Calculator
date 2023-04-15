@@ -2,6 +2,17 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
+      "router/*": ["src/router/*"],
+      "styles/*": ["src/styles/*"],
+      "utils/*": ["src/utils/*"],
+      "types/*": ["src/types/*"],
+      "pages/*": ["src/pages/*"],
+      "router": ["src/router"]
+    },
     "module": "esnext",
     "target": "ES6",
     "jsx": "react-jsx",

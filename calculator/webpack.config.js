@@ -28,6 +28,16 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      components: path.resolve(__dirname, "src/components/"),
+      constants: path.resolve(__dirname, "src/constants/"),
+      router: path.resolve(__dirname, "src/router/"),
+      styles: path.resolve(__dirname, "src/styles/"),
+      router: path.resolve(__dirname, "src/router"),
+      types: path.resolve(__dirname, "src/types/"),
+      utils: path.resolve(__dirname, "src/utils/"),
+      pages: path.resolve(__dirname, "src/pages/"),
+    },
     extensions: [".*", ".js", ".ts", ".json", ".jsx", ".tsx"],
   },
   plugins: [
