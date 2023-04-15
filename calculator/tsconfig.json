@@ -6,6 +6,7 @@
     "paths": {
       "components/*": ["src/components/*"],
       "constants/*": ["src/constants/*"],
+      "locales/*": ["public/locales/*"],
       "router/*": ["src/router/*"],
       "styles/*": ["src/styles/*"],
       "utils/*": ["src/utils/*"],

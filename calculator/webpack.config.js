@@ -31,6 +31,7 @@ module.exports = {
     alias: {
       components: path.resolve(__dirname, "src/components/"),
       constants: path.resolve(__dirname, "src/constants/"),
+      locales: path.resolve(__dirname, "public/locales/"),
       router: path.resolve(__dirname, "src/router/"),
       styles: path.resolve(__dirname, "src/styles/"),
       router: path.resolve(__dirname, "src/router"),

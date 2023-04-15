@@ -1,7 +1,10 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { ButtonContainer } from './ClearButtonStyles';
 
 export const ClearButton: FC = () => {
-  return <ButtonContainer>Сlear history</ButtonContainer>;
+  const { t: translate } = useTranslation();
+
+  return <ButtonContainer>{translate('clear')}</ButtonContainer>;
 };

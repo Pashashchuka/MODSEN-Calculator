@@ -1,4 +1,5 @@
 export const PATHS = {
   SETTINGS: '/settings',
-  HOME: '/home'
+  HOME: '/home',
+  ERROR: '*'
 };
