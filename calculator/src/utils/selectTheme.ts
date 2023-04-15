@@ -1,34 +1,45 @@
-import { lightTheme, darkTheme } from 'styles/theme';
+import { lightTheme, darkTheme, coloredTheme } from 'styles/theme';
 
 export const updateState = (event: { target: { value: string } }) => {
-  if (event.target.value === 'light') {
-    localStorage.setItem('theme', 'light');
-
-    return {
-      theme: lightTheme,
-      value: 'light'
-    };
-  } else if (event.target.value === 'dark') {
-    localStorage.setItem('theme', 'dark');
-
-    return {
-      theme: darkTheme,
-      value: 'dark'
-    };
-  } else {
-    return {
-      theme: darkTheme,
-      value: 'dark'
-    };
+  switch (event.target.value) {
+    case 'light': {
+      localStorage.setItem('theme', 'light');
+      return {
+        theme: lightTheme,
+        value: 'light'
+      };
+    }
+    case 'dark': {
+      localStorage.setItem('theme', 'dark');
+      return {
+        theme: darkTheme,
+        value: 'dark'
+      };
+    }
+    case 'colored': {
+      localStorage.setItem('theme', 'colored');
+      return {
+        theme: darkTheme,
+        value: 'colored'
+      };
+    }
+    default:
+      return {
+        theme: darkTheme,
+        value: 'dark'
+      };
   }
 };
 
 export const selectThemeForProvider = (value: string) => {
-  if (value === 'light') {
-    return lightTheme;
-  } else if (value === 'dark') {
-    return darkTheme;
-  } else {
-    return darkTheme;
+  switch (value) {
+    case 'light':
+      return lightTheme;
+    case 'dark':
+      return darkTheme;
+    case 'colored':
+      return coloredTheme;
+    default:
+      return darkTheme;
   }
 };

@@ -37,3 +37,23 @@ export const darkTheme = {
   shadow: '3px 3px 3px 0px rgba(248, 249, 249, 0.2)',
   body: 'radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)'
 };
+
+export const coloredTheme = {
+  text: '#1c88ae',
+  number: '#dbafae',
+  logoText: '#ab8b89',
+  function: '#f115e9',
+  operation: '#edd7d9',
+  blackColor: '#000000',
+  background: '#f1d3d4',
+  buttonColor: '#ffffff',
+  containerBg: '#f1d3d4',
+  displayColor: '#d8dbd4',
+  displayNumbers: '#01030b',
+  containerBorder: '#fceeee',
+  darkDisplayBorder: '#ab8b89',
+  lightDisplayBorder: '#dbc9c9',
+  darkShadow: 'rgba(0, 0, 0, 0.8)',
+  shadow: '3px 3px 3px 0px rgba(0, 0, 255, .6)',
+  body: 'radial-gradient(circle at 0.7% 1%, rgb(215, 248, 247) 0%, rgb(155, 278, 247) 100.2%)'
+};
