@@ -12,7 +12,9 @@
       "utils/*": ["src/utils/*"],
       "types/*": ["src/types/*"],
       "pages/*": ["src/pages/*"],
-      "router": ["src/router"]
+      "store/*": ["src/store/*"],
+      "router": ["src/router"],
+      "store": ["src/store"]
     },
     "module": "esnext",
     "target": "ES6",

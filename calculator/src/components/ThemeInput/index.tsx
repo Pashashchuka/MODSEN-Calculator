@@ -1,17 +1,18 @@
-import React, { FC, useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { THEME_OPTIONS } from 'constants/themeOptions';
+
+import { useThemeInput } from './hooks';
 
 import { Select, SelectItem } from './ThemeInputStyles';
 
 export const ThemeInput: FC = () => {
   const { t: translate } = useTranslation();
-  const { value, changeTheme } = useContext(ThemeContext);
+  const { actualTheme, changeTheme } = useThemeInput();
 
   return (
-    <Select defaultValue={value} onChange={changeTheme}>
+    <Select defaultValue={actualTheme} onChange={changeTheme}>
       {THEME_OPTIONS.map(({ id, content, value }) => (
         <SelectItem key={id} value={value}>
           {translate(`${content}`)}

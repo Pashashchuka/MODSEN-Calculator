@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
 export const Title = styled.h1`
   color: ${({ theme }) => theme.text};
   font-size: 80px;
+  margin-top: 20%;
   text-align: center;
 
   @media (max-width: 620px) {

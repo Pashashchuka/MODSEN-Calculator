@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   height: 70%;
+  margin-top: 13%;
   width: 100%;
 `;
 

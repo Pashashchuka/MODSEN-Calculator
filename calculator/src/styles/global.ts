@@ -1,9 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
-
-export const Wrapper = styled.div`
-  background: ${({ theme }) => theme.body};
-  height: 100%;
-`;
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 * {
@@ -13,11 +8,7 @@ export default createGlobalStyle`
 }
 
 html,
-body {
-  height: 100vh;
-  width: 100%;
-}
-
+body,
 #root {
   height: 100%;
   width: 100%;
