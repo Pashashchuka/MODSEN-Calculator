@@ -1,13 +1,45 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+
+  @media (max-width: 538px) {
+    gap: 7px;
+    margin-top: 5px;
+  }
+`;
+
 export const Wrapper = styled.div`
-  display: grid;
-  grid-template-areas:
-    'button_1 center button_5'
-    'button_2 center button_6'
-    'button_3 center button_7'
-    'button_4 center button_8';
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  padding: 30px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  @media (max-width: 538px) {
+    gap: 7px;
+  }
+`;
+
+export const VerticalBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (max-width: 538px) {
+    gap: 7px;
+  }
+`;
+
+export const HorizontalBlock = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+
+  @media (max-width: 538px) {
+    gap: 7px;
+  }
 `;

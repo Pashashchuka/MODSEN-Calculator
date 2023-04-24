@@ -6,6 +6,7 @@ export const lightTheme = {
   operation: '#fcf5ef',
   blackColor: '#000000',
   background: '#ffffff',
+  errorColor: '#FF0000',
   buttonColor: '#9b968e',
   containerBg: '#fffbf7',
   displayColor: '#b2a79e',
@@ -13,6 +14,7 @@ export const lightTheme = {
   containerBorder: '#e5dac9',
   darkDisplayBorder: '#e8dccc',
   lightDisplayBorder: '#e6dace',
+  errorShadow: 'rgba(251, 3, 3, 1)',
   darkShadow: 'rgba(0, 0, 0, 0.8)',
   shadow: '3px 3px 3px 0px rgba(0, 0, 0, 0.8)',
   body: 'linear-gradient(to bottom, #FFFAF0 0%, #F0EBE1 100%)'
@@ -26,6 +28,7 @@ export const darkTheme = {
   operation: '#201e1e',
   blackColor: '#000000',
   background: '#201e1e',
+  errorColor: '#FF0000',
   buttonColor: '#ffffff',
   containerBg: '#252223',
   displayColor: '#43423e',
@@ -33,6 +36,7 @@ export const darkTheme = {
   containerBorder: '#383838',
   darkDisplayBorder: '#322d2a',
   lightDisplayBorder: '#484745',
+  errorShadow: 'rgba(251, 3, 3, 1)',
   darkShadow: 'rgba(0, 0, 0, 0.8)',
   shadow: '3px 3px 3px 0px rgba(248, 249, 249, 0.2)',
   body: 'radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)'
@@ -46,6 +50,7 @@ export const coloredTheme = {
   operation: '#edd7d9',
   blackColor: '#000000',
   background: '#f1d3d4',
+  errorColor: '#FF0000',
   buttonColor: '#ffffff',
   containerBg: '#f1d3d4',
   displayColor: '#d8dbd4',
@@ -53,7 +58,30 @@ export const coloredTheme = {
   containerBorder: '#fceeee',
   darkDisplayBorder: '#ab8b89',
   lightDisplayBorder: '#dbc9c9',
+  errorShadow: 'rgba(251, 3, 3, 1)',
   darkShadow: 'rgba(0, 0, 0, 0.8)',
   shadow: '3px 3px 3px 0px rgba(0, 0, 255, .6)',
   body: 'radial-gradient(circle at 0.7% 1%, rgb(215, 248, 247) 0%, rgb(155, 278, 247) 100.2%)'
+};
+
+export const monochromedTheme = {
+  text: '#000000',
+  number: '#ffffff',
+  logoText: '#000000',
+  function: '#ffffff',
+  operation: '#ffffff',
+  blackColor: '#000000',
+  background: '#ffffff',
+  errorColor: '#000000',
+  buttonColor: '#000000',
+  containerBg: '#ffffff',
+  displayColor: '#ffffff',
+  displayNumbers: '#030305',
+  containerBorder: '#000000',
+  darkDisplayBorder: '#000000',
+  lightDisplayBorder: '#000000',
+  errorShadow: 'rgba(0, 0, 0, 0.8)',
+  darkShadow: 'rgba(0, 0, 0, 0.8)',
+  shadow: '3px 3px 3px 0px rgba(0, 0, 0, 0.5)',
+  body: '#ffffff'
 };

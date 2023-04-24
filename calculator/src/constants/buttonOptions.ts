@@ -1,25 +1,34 @@
-export const CONTROL_BUTTONS = [
-  { id: 1, context: 'C', type: 'function' },
-  { id: 2, context: '*', type: 'operation' },
-  { id: 3, context: '-', type: 'operation' },
-  { id: 4, context: '/', type: 'operation' },
-  { id: 5, context: '+', type: 'operation' },
-  { id: 6, context: '=', type: 'operation' },
-  { id: 7, context: '.', type: 'operation' },
-  { id: 8, context: 'CE', type: 'function' }
+export const TOP_BUTTONS = [
+  { id: 1, content: '1/x', type: 'bracket' },
+  { id: 2, content: '+/-', type: 'bracket' },
+  { id: 3, content: '√', type: 'bracket' }
 ];
 
-export const NUMBER_BUTTONS = [
-  { id: 1, context: '9', type: 'number' },
-  { id: 2, context: '8', type: 'number' },
-  { id: 3, context: '7', type: 'number' },
-  { id: 4, context: '6', type: 'number' },
-  { id: 5, context: '5', type: 'number' },
-  { id: 6, context: '4', type: 'number' },
-  { id: 7, context: '3', type: 'number' },
-  { id: 8, context: '2', type: 'number' },
-  { id: 9, context: '1', type: 'number' },
-  { id: 10, context: '%', type: 'operation' },
-  { id: 12, context: '0', type: 'number' },
-  { id: 14, context: '+/-', type: 'operation' }
+export const LEFT_CONTROL_BUTTONS = [
+  { id: 1, content: 'C', type: 'function' },
+  { id: 2, content: '^', type: 'operation' },
+  { id: 3, content: '/', type: 'operation' },
+  { id: 4, content: '%', type: 'operation' }
+];
+
+export const RIGHT_CONTROL_BUTTONS = [
+  { id: 1, content: '*', type: 'operation' },
+  { id: 2, content: '-', type: 'operation' },
+  { id: 3, content: '+', type: 'operation' },
+  { id: 4, content: 'CE', type: 'function' }
+];
+
+export const CENTRAL_BUTTONS = [
+  { id: 1, content: '9', type: 'number' },
+  { id: 2, content: '8', type: 'number' },
+  { id: 3, content: '7', type: 'number' },
+  { id: 4, content: '6', type: 'number' },
+  { id: 5, content: '5', type: 'number' },
+  { id: 6, content: '4', type: 'number' },
+  { id: 7, content: '3', type: 'number' },
+  { id: 8, content: '2', type: 'number' },
+  { id: 9, content: '1', type: 'number' },
+  { id: 10, content: '.', type: 'operation' },
+  { id: 11, content: '0', type: 'number' },
+  { id: 12, content: '=', type: 'operation' }
 ];

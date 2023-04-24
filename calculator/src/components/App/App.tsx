@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { CombinedState } from 'redux';
 import { connect } from 'react-redux';
 
-import { selectThemeForProvider } from 'utils/selectThemeForProvider';
-import { IinitialState } from 'store/reducers/reducers';
+import { themes } from 'utils/selectThemeForProvider';
+import { ITheme, TProps } from 'types/types';
 import { getTheme } from 'store/selectors';
-import { ITheme } from 'types/types';
 import Router from 'router';
 
 import { Header } from 'components/Header';
@@ -19,13 +17,13 @@ type TAppProps = {
 };
 
 class App extends Component<TAppProps> {
-  constructor(props: TAppProps | Readonly<TAppProps>) {
+  constructor(props: TAppProps) {
     super(props);
   }
 
   render() {
     const value: string = this.props.value;
-    const newTheme: ITheme = selectThemeForProvider(value);
+    const newTheme: ITheme = themes[value];
 
     return (
       <ThemeProvider theme={newTheme}>
@@ -39,11 +37,7 @@ class App extends Component<TAppProps> {
   }
 }
 
-const mapStateToProps = (
-  props: CombinedState<{
-    history: IinitialState;
-  }>
-): { value: string } => ({
+const mapStateToProps = (props: TProps): { value: string } => ({
   value: getTheme(props)
 });
 

@@ -1,6 +1,6 @@
 import React, { Component, ReactNode } from 'react';
 
-import { Wrapper } from './ErrorBoundaryStyles';
+import { BlinkLetter, ErrorMessage, Wrapper } from './ErrorBoundaryStyles';
 
 type TErrorBoundaryProps = {
   children?: ReactNode;
@@ -25,7 +25,13 @@ export class ErrorBoundary extends Component<TErrorBoundaryProps, TErrorBoundary
     const { hasError } = this.state;
 
     if (hasError) {
-      return <Wrapper>Oops, something went wrong</Wrapper>;
+      return (
+        <Wrapper>
+          <ErrorMessage>
+            E<BlinkLetter>r</BlinkLetter>ro<BlinkLetter>r</BlinkLetter>
+          </ErrorMessage>
+        </Wrapper>
+      );
     }
 
     return children;

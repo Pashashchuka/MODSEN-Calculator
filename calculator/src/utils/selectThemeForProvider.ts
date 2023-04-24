@@ -1,14 +1,8 @@
-import { lightTheme, darkTheme, coloredTheme } from 'styles/theme';
+import { lightTheme, darkTheme, coloredTheme, monochromedTheme } from 'styles/theme';
 
-export const selectThemeForProvider = (value: string) => {
-  switch (value) {
-    case 'dark':
-      return darkTheme;
-    case 'light':
-      return lightTheme;
-    case 'colored':
-      return coloredTheme;
-    default:
-      return darkTheme;
-  }
+export const themes = {
+  dark: darkTheme,
+  light: lightTheme,
+  colored: coloredTheme,
+  monochromed: monochromedTheme
 };

@@ -1,8 +1,47 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const TIME = 0.5;
 const HEIGHT = 100;
 const WIDTH = 100;
+
+const glitch = keyframes`
+{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}`;
+
+const glitchTop = keyframes`
+{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}`;
+
+const glitchBottom = keyframes`
+{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}`;
 
 export const Wrapper = styled.div`
   align-items: center;
@@ -18,10 +57,30 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
+  animation: ${glitch} 1s linear infinite;
   color: ${({ theme }) => theme.text};
   font-size: 80px;
   margin-top: 20%;
   text-align: center;
+
+  &:before,
+  &:after {
+    content: '404';
+    position: absolute;
+    left: 0;
+  }
+
+  &:before {
+    animation: ${glitchTop} 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+
+  &:after {
+    animation: ${glitchBottom} 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
 
   @media (max-width: 620px) {
     font-size: 24px;

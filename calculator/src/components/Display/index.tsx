@@ -1,11 +1,23 @@
 import React, { FC } from 'react';
 
-import { DisplayBlock, Number } from './DisplayStyles';
+import { DisplayBlock, DisplayErrorBlock, Number, Error } from './DisplayStyles';
 
-export const Display: FC = () => {
+interface IDisplayProps {
+  firstValue: string;
+  displayValue: number;
+  isDisplayError: boolean;
+}
+
+export const Display: FC<IDisplayProps> = ({ firstValue, displayValue, isDisplayError }) => {
   return (
-    <DisplayBlock>
-      <Number>0</Number>
-    </DisplayBlock>
+    <>
+      <DisplayBlock className={isDisplayError && 'active'}>
+        <Number>{firstValue || displayValue}</Number>
+      </DisplayBlock>
+      <DisplayErrorBlock className={isDisplayError && 'active'}>
+        <Error>E</Error>
+        <Number>0.</Number>
+      </DisplayErrorBlock>
+    </>
   );
 };

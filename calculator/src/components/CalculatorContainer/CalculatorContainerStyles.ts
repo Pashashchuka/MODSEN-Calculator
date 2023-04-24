@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const BORDER = 10;
-const HEIGHT = 490;
+const HEIGHT = 515;
 const WIDTH = 500;
 
 export const Wrapper = styled.div`
@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 60%;
+
+  @media (max-width: 884px) {
+    width: 100%;
+  }
 `;
 
 export const Block = styled.div`
@@ -22,4 +26,10 @@ export const Block = styled.div`
   height: ${HEIGHT}px;
   max-width: ${WIDTH}px;
   width: 100%;
+
+  @media (max-width: 538px) {
+    height: 300px;
+    max-width: 290px;
+    width: 100%;
+  }
 `;

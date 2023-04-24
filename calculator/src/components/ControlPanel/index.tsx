@@ -1,19 +1,41 @@
 import React, { FC } from 'react';
 
-import { CONTROL_BUTTONS } from 'constants/buttonOptions';
+import {
+  RIGHT_CONTROL_BUTTONS,
+  LEFT_CONTROL_BUTTONS,
+  TOP_BUTTONS
+} from 'constants/buttonOptions';
 
 import { Keypad } from 'components/Keypad';
 import { Button } from 'components/Button';
 
-import { Wrapper } from './ControlPanelStyles';
+import { Container, Wrapper, VerticalBlock, HorizontalBlock } from './ControlPanelStyles';
 
-export const ControlPanel: FC = () => {
+interface IControlPanelProps {
+  handleClick: (content: string) => void;
+}
+
+export const ControlPanel: FC<IControlPanelProps> = ({ handleClick }) => {
   return (
-    <Wrapper>
-      {CONTROL_BUTTONS.map(({ id, context, type }) => (
-        <Button key={id} value={context} type={type} />
-      ))}
-      <Keypad />
-    </Wrapper>
+    <Container>
+      <HorizontalBlock>
+        {TOP_BUTTONS.map(({ id, content, type }) => (
+          <Button key={id} value={content} type={type} handleClick={handleClick} />
+        ))}
+      </HorizontalBlock>
+      <Wrapper>
+        <VerticalBlock>
+          {LEFT_CONTROL_BUTTONS.map(({ id, content, type }) => (
+            <Button key={id} value={content} type={type} handleClick={handleClick} />
+          ))}
+        </VerticalBlock>
+        <Keypad handleClick={handleClick} />
+        <VerticalBlock>
+          {RIGHT_CONTROL_BUTTONS.map(({ id, content, type }) => (
+            <Button key={id} value={content} type={type} handleClick={handleClick} />
+          ))}
+        </VerticalBlock>
+      </Wrapper>
+    </Container>
   );
 };

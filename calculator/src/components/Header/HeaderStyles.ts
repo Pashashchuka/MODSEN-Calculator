@@ -4,15 +4,16 @@ const TIME = 0.5;
 const HEIGHT = 80;
 
 const BASE_URL = 'http://localhost:3000';
-const SETTINGS_URL = `${BASE_URL}/settings`;
-const HOME_URL = `${BASE_URL}/home`;
 const APP_URL = `${BASE_URL}/`;
+const HOME_URL = `${BASE_URL}/home`;
+const SETTINGS_URL = `${BASE_URL}/settings`;
+const WINDOW_URL = window.location.href;
 
 const isHiddenHeader =
-  window.location.href !== SETTINGS_URL &&
-  window.location.href !== HOME_URL &&
-  window.location.href !== BASE_URL &&
-  window.location.href !== APP_URL;
+  WINDOW_URL !== SETTINGS_URL &&
+  WINDOW_URL !== HOME_URL &&
+  WINDOW_URL !== BASE_URL &&
+  WINDOW_URL !== APP_URL;
 
 export const Wrapper = styled.div`
   align-items: center;
@@ -33,7 +34,7 @@ export const Title = styled.h1`
   font-size: 40px;
 
   @media (max-width: 768px) {
-    font-size: 25px;
+    font-size: 20px;
   }
 `;
 

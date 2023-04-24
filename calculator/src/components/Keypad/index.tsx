@@ -1,16 +1,20 @@
 import React, { FC } from 'react';
 
-import { NUMBER_BUTTONS } from 'constants/buttonOptions';
+import { CENTRAL_BUTTONS } from 'constants/buttonOptions';
 
 import { Button } from 'components/Button';
 
 import { Wrapper } from './KeypadStyles';
 
-export const Keypad: FC = () => {
+interface IKeypadProps {
+  handleClick: (content: string) => void;
+}
+
+export const Keypad: FC<IKeypadProps> = ({ handleClick }) => {
   return (
     <Wrapper>
-      {NUMBER_BUTTONS.map(({ id, context, type }) => (
-        <Button key={id} value={context} type={type} />
+      {CENTRAL_BUTTONS.map(({ id, content, type }) => (
+        <Button key={id} value={content} handleClick={handleClick} type={type} />
       ))}
     </Wrapper>
   );

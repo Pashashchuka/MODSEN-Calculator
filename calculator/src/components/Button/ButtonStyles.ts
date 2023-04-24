@@ -35,4 +35,25 @@ export const ButtonContainer = styled.button`
   &.number {
     background: ${({ theme }) => theme.number};
   }
+
+  &.bracket {
+    background: ${({ theme }) => theme.operation};
+    border-radius: 60px;
+    font-size: 15px;
+    height: ${HEIGHT - 15}px;
+    width: ${WIDTH - 15}px;
+
+    @media (max-width: 538px) {
+      font-size: 12px;
+      height: 20px;
+      width: 35px;
+    }
+  }
+
+  @media (max-width: 538px) {
+    border-radius: 7px;
+    font-size: 15px;
+    height: 25px;
+    width: 42px;
+  }
 `;
