@@ -12,7 +12,7 @@ export const ThemeInput: FC = () => {
   const { actualTheme, changeTheme } = useThemeInput();
 
   return (
-    <Select defaultValue={actualTheme} onChange={changeTheme}>
+    <Select defaultValue={actualTheme} onChange={changeTheme} name="theme-select">
       {THEME_OPTIONS.map(({ id, content, value }) => (
         <SelectItem key={id} value={value}>
           {translate(`${content}`)}

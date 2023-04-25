@@ -1,5 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier", "react-hooks", "cypress"],
   "extends": ["plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -27,6 +28,7 @@
     }
   },
   "env": {
+    "cypress/globals": true,
     "browser": true,
     "node": true,
     "es6": true

@@ -26,7 +26,7 @@ type THistoryState = {
 
 type THistoryProps = {
   isHiddenHistory?: boolean;
-  t: ReturnType<typeof useTranslation>['t'];
+  t: (key: string, options?: object) => string;
   setIsHiddenHistory?: (payload: boolean) => void;
 };
 
@@ -91,7 +91,7 @@ class History extends Component<THistoryProps, THistoryState> {
           </CloseBlock>
         </TitleBlock>
         <Line />
-        <HistoryBlock className={!this.props.isHiddenHistory && 'active'}>
+        <HistoryBlock className={!this.props.isHiddenHistory && 'active'} id="history">
           {historyItems}
         </HistoryBlock>
       </Wrapper>

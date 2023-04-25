@@ -59,7 +59,7 @@ export const Wrapper = styled.div`
 export const Title = styled.h1`
   animation: ${glitch} 1s linear infinite;
   color: ${({ theme }) => theme.text};
-  font-size: 80px;
+  font-size: 70px;
   margin-top: 20%;
   text-align: center;
 

@@ -12,7 +12,7 @@ export const Display: FC<IDisplayProps> = ({ firstValue, displayValue, isDisplay
   return (
     <>
       <DisplayBlock className={isDisplayError && 'active'}>
-        <Number>{firstValue || displayValue}</Number>
+        <Number id="displayValue">{firstValue || displayValue}</Number>
       </DisplayBlock>
       <DisplayErrorBlock className={isDisplayError && 'active'}>
         <Error>E</Error>

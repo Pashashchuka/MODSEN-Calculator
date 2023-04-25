@@ -10,7 +10,7 @@ export const LanguageInput: FC = () => {
   const { actualLanguage, changeLanguage } = useInputLanguages();
 
   return (
-    <Select defaultValue={actualLanguage} onChange={changeLanguage}>
+    <Select defaultValue={actualLanguage} onChange={changeLanguage} name="language-select">
       {LANGUAGE_OPTIONS.map(({ id, content, value }) => (
         <SelectItem key={id} value={value}>
           {content}

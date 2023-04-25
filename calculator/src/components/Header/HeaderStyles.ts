@@ -3,21 +3,9 @@ import styled from 'styled-components';
 const TIME = 0.5;
 const HEIGHT = 80;
 
-const BASE_URL = 'http://localhost:3000';
-const APP_URL = `${BASE_URL}/`;
-const HOME_URL = `${BASE_URL}/home`;
-const SETTINGS_URL = `${BASE_URL}/settings`;
-const WINDOW_URL = window.location.href;
-
-const isHiddenHeader =
-  WINDOW_URL !== SETTINGS_URL &&
-  WINDOW_URL !== HOME_URL &&
-  WINDOW_URL !== BASE_URL &&
-  WINDOW_URL !== APP_URL;
-
 export const Wrapper = styled.div`
   align-items: center;
-  display: ${isHiddenHeader ? 'none' : 'flex'};
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: ${HEIGHT}px;

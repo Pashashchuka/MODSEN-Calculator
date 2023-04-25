@@ -6,6 +6,10 @@
 
 /build
 
+cypress/screenshots
+cypress/videos
+/coverage
+
 .env.development.local
 .env.production.local
 .env.test.local
