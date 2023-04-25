@@ -31,7 +31,12 @@ class App extends Component<TAppProps, TAppState> {
   componentDidMount() {
     const currentPath = window.location.pathname;
 
-    if (currentPath !== PATHS.HOME && currentPath !== PATHS.SETTINGS) {
+    if (
+      currentPath !== PATHS.HOME &&
+      currentPath !== PATHS.SETTINGS &&
+      currentPath !== '/' &&
+      currentPath !== ''
+    ) {
       this.setState({
         isHiddenHeader: true
       });
