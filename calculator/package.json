@@ -16,6 +16,7 @@
     "babel-loader": "^9.1.2",
     "cypress": "^12.10.0",
     "eslint": "^8.38.0",
+    "eslint-plugin-cypress": "^2.13.3",
     "html-webpack-plugin": "^5.5.0",
     "i18next": "^22.4.14",
     "i18next-browser-languagedetector": "^7.0.1",
@@ -40,13 +41,18 @@
     "eslint:test": "eslint src --ext .js,.jsx",
     "eslint:fix": "eslint --fix src --ext .js,.jsx",
     "cypress:open": "cypress open",
+    "lint": "eslint src/**/*.ts src/**/*.tsx",
+    "lint:fix": "eslint --fix",
     "cypress:run": "cypress run",
     "build": "webpack"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.58.0",
     "@typescript-eslint/parser": "^5.58.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-webpack-plugin": "^4.0.1",
     "typescript": "^4.0.0"
   }
