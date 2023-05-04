@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["src/components/*"],
+      "constants/*": ["src/constants/*"],
+      "locales/*": ["public/locales/*"],
+      "router/*": ["src/router/*"],
+      "styles/*": ["src/styles/*"],
+      "utils/*": ["src/utils/*"],
+      "types/*": ["src/types/*"],
+      "pages/*": ["src/pages/*"],
+      "store/*": ["src/store/*"],
+      "router": ["src/router"],
+      "store": ["src/store"]
+    },
+    "module": "esnext",
+    "target": "ES6",
+    "jsx": "react-jsx",
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "allowJs": false,
+    "strict": false,
+    "noEmit": true
+  },
+  "include": ["src"]
+}
