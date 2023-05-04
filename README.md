@@ -1,5 +1,7 @@
 # MODSEN-Calculator
 
+#### This calculator is as close as possible to a real button calculator, so if an error occurs in the calculations, you must clear the screen by pressing the Clear (C) button!
+
 #### Start ESlint
 
 - Check eslint:
